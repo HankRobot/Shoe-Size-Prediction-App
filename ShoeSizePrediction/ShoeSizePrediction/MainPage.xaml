@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShoeSizePrediction"
+             x:Class="ShoeSizePrediction.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/> 
+            <RowDefinition Height="5*"/> 
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Place new controls here -->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="LightBlue">
+            <Label  BackgroundColor="LightBlue" Text="Shoe Size Prediction App" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                FontSize="20"
+                TextColor="Black"/>
+        </Grid>
+        <Image Grid.Row="3" Grid.Column="1" x:Name="images" Source="shoe.png"/>
+
+        <Entry Grid.Row="5" Grid.Column="1" x:Name="heightentry" Placeholder="Height(cm)"
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           BackgroundColor="AliceBlue"
+           FontSize="15"
+           Keyboard="Numeric"/>
+        <Entry Grid.Row="7" Grid.Column="1" x:Name="weightentry" Placeholder="Weight(kg)"
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           BackgroundColor="AliceBlue"
+            FontSize="15"
+           Keyboard="Numeric"/>
+        <Picker Grid.Row="9" Grid.Column="1" x:Name="genderentry" Title="Gender"
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           FontSize="15"
+           TextColor="Black"
+           BackgroundColor="AliceBlue">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Grid.Row="11" Grid.Column="1" x:Name="CalculateBut" Text="Check Shoe Size"
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           FontSize="15"
+           BackgroundColor="AliceBlue"
+           Pressed="CalculateBut_Pressed"/>  
+    </Grid>
+
+</ContentPage>
